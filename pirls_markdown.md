@@ -1,6 +1,6 @@
 PIRLS Hypotheses–Reproducible Code
 ================
-3/15/2022
+4/15/2022
 
 # Concatenate the data
 
@@ -116,35 +116,14 @@ psych::describeBy(mydata, mydata$ATBG05AA) # get descriptive statistics
 shapiro.test(mydata$ATBR11D) # test for normality 
 
 wilcox.test(ATBR07 ~ ATBG05AA, data = mydata) # nonparametric version of t-tests
-
-t.test(ATBR07 ~ ATBG05AA, data = mydata) # t-tests
 ```
 
-## Get means, standard deviations
+## Get medians
 
 with a homemade function
 
 ``` r
 # ATBR10D, ATBR12E ATBR11D, ATBR11G, ATBR11F,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07, 
-
-
-mv <- function(a){
-library(magrittr)
-library(dplyr)
-mo <- mydata%>%
-  dplyr::group_by(ATBG05AA) %>%
-  dplyr::filter(ATBG05AA == 1) %>%
-  dplyr::summarise(mean({{a}}))
-
-me <- mydata%>%
-  dplyr::group_by(ATBG05AA) %>%
-  dplyr::filter(ATBG05AA == 2) %>%
-  dplyr::summarise(mean({{a}}))
-
-return(list(mo,me))
-
-}
-
 
 sv <- function(a){
 library(magrittr)
@@ -152,12 +131,12 @@ library(dplyr)
 mo <- mydata%>%
   dplyr::group_by(ATBG05AA) %>%
   dplyr::filter(ATBG05AA == 1) %>%
-  dplyr::summarise(sd({{a}}))
+  dplyr::summarise(median({{a}}))
 
 me <- mydata%>%
   dplyr::group_by(ATBG05AA) %>%
   dplyr::filter(ATBG05AA == 2) %>%
-  dplyr::summarise(sd({{a}}))
+  dplyr::summarise(median({{a}}))
 
 return(list(mo,me))
 
@@ -172,15 +151,10 @@ return(list(mo,me))
 # ATBR10D, ATBR12E ATBR11D, ATBR11G, ATBR11F,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07
 
 
-library(rstatix)
-
-mydata$ATBG05AA <- as.factor(mydata$ATBG05AA)
-
-mydata <- data.frame(mydata)
-
-mydata %>% rstatix::cohens_d(ATBR07 ~ ATBG05AA, var.equal = F)
-
-library(effectsize)
-
-effectsize::rank_biserial(ATBR07 ~ ATBG05AA, data = mydata) 
+rFrom Wilcox <- function(wilcoxModel, N){
+        z <- wilcoxModel$p.value/2
+        r <- z/sqrt(N)
+        cat(cilcoxModel$data.name, "Effect Size, r = ", r)
+  
+}
 ```
