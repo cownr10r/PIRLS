@@ -8,7 +8,7 @@ Start by importing the data which has been downloaded from the PIRLS
 website. Then re-code the dependent variables.
 
 ``` r
-setwd("C:\\Users\\mario\\OneDrive\\Desktop\\PIRLS\\P16_SPSSData_pt2")
+setwd("C:\\path\\ goes \\here")
 pirls <-  intsvy::pirls.select.merge(folder = getwd(), 
                                      countries = c("USA"),
                                       student = c("IDSTUD"),
@@ -109,7 +109,7 @@ run for non-parametric version of t-tests, and the t-test
 # ATBR12E ATBR11D, ATBR12E,ATBR11G, ATBR11F,ATBR11C,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07, ATBR10D
 
 
-mydata <- readRDS("c:/users/mario/OneDrive/Desktop/PIRLS/SAMPLED DATA/beginningteachers_correct_variable_5yrs.rds")
+mydata <- readRDS("Path\to\data\here.rds") 
 
 psych::describeBy(mydata, mydata$ATBG05AA) # get descriptive statistics
 
@@ -151,10 +151,5 @@ return(list(mo,me))
 # ATBR10D, ATBR12E ATBR11D, ATBR11G, ATBR11F,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07
 
 
-rFrom Wilcox <- function(wilcoxModel, N){
-        z <- wilcoxModel$p.value/2
-        r <- z/sqrt(N)
-        cat(cilcoxModel$data.name, "Effect Size, r = ", r)
-  
-}
+effectsize::rank_biserial(ATBR10D ~ ATBG05AA, data = mydata) #effect size for mann whitney U
 ```
