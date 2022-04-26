@@ -102,54 +102,64 @@ Samp <- pirls2 %>%
 
 ## Work with the data
 
-to run tests. Shapiro test in R to run for normality, Wilcoxon test to
-run for non-parametric version of t-tests, and the t-test
+to run tests. Shapiro test in R to run for normality,
 
-``` r
+````` r
 # ATBR12E ATBR11D, ATBR12E,ATBR11G, ATBR11F,ATBR11C,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07, ATBR10D
 
 
-mydata <- readRDS("Path\to\data\here.rds") 
+mydata <- readRDS("c:/users/mario/OneDrive/Desktop/PIRLS/SAMPLED DATA/beginningteachers_correct_variable_5yrs.rds")
 
 psych::describeBy(mydata, mydata$ATBG05AA) # get descriptive statistics
 
-shapiro.test(mydata$ATBR11D) # test for normality 
+shapiro.test(mydata$ATBR11D) # test for normality. All tests failed 
 
-wilcox.test(ATBR07 ~ ATBG05AA, data = mydata) # nonparametric version of t-tests
-```
+WRS2::yuenbt(ATBR07~ATBG05AA, data = mydata) # use Yuen's robust t test with bootstrapping.
+effectsize::cohens_d(ATBR07~ATBG05AA, data = mydata) # calculate effect size with cohen's d.
 
-## Get medians
-
-with a homemade function
+````
+## Get means, standard errors
+`````
 
 ``` r
 # ATBR10D, ATBR12E ATBR11D, ATBR11G, ATBR11F,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07, 
 
-sv <- function(a){
+
+mv <- function(a){
 library(magrittr)
 library(dplyr)
 mo <- mydata%>%
   dplyr::group_by(ATBG05AA) %>%
   dplyr::filter(ATBG05AA == 1) %>%
-  dplyr::summarise(median({{a}}))
+  dplyr::summarise(mean({{a}}))
 
 me <- mydata%>%
   dplyr::group_by(ATBG05AA) %>%
   dplyr::filter(ATBG05AA == 2) %>%
-  dplyr::summarise(median({{a}}))
+  dplyr::summarise(mean({{a}}))
 
 return(list(mo,me))
 
 }
-```
-
-## Calculate effect sizes
-
-``` r
-# Effect sizes
-
-# ATBR10D, ATBR12E ATBR11D, ATBR11G, ATBR11F,ATBR11C, ATBR11E, ATBR14CA, ATBR14CC,  ATBR14CD, ATBR14CE, ATBR14CF, ATBR06, ATBR07
 
 
-effectsize::rank_biserial(ATBR10D ~ ATBG05AA, data = mydata) #effect size for mann whitney U
+sv <- function(a){
+library(magrittr)
+library(dplyr)
+library(plotrix)
+  
+
+mo <- mydata%>%
+  dplyr::group_by(ATBG05AA) %>%
+  dplyr::filter(ATBG05AA == 1) %>%
+  dplyr::summarise(plotrix::std.error({{a}}))
+
+me <- mydata%>%
+  dplyr::group_by(ATBG05AA) %>%
+  dplyr::filter(ATBG05AA == 2) %>%
+  dplyr::summarise(plotrix::std.error({{a}}))
+
+return(list(mo,me))
+
+}
 ```
