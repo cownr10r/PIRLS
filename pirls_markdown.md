@@ -103,7 +103,7 @@ Samp <- pirls2 %>%
   group_by(ATBG05AA) %>%
   dplyr::filter(., ATBG01 < 6) 
 
-# n = 922 
+
 
 saveRDS(Samp, "c:/users/mario/OneDrive/Desktop/PIRLS/SAMPLED DATA/beginningteachers_correct_variable_5yrs-922.rds")
 ```
