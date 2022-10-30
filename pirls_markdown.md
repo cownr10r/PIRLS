@@ -408,22 +408,22 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## Call:
     ## WRS2::yuenbt(formula = x ~ mydata$ATBG05AA)
     ## 
-    ## Test statistic: 0.9782 (df = NA), p-value = 0.29716
+    ## Test statistic: 0.9782 (df = NA), p-value = 0.31386
     ## 
     ## Trimmed mean difference:  0.08207 
     ## 95 percent confidence interval:
-    ## -0.0791     0.2433 
+    ## -0.0856     0.2497 
     ## 
     ## 
     ## $ATBG01
     ## Call:
     ## WRS2::yuenbt(formula = x ~ mydata$ATBG05AA)
     ## 
-    ## Test statistic: 0.8194 (df = NA), p-value = 0.38397
+    ## Test statistic: 0.8194 (df = NA), p-value = 0.42905
     ## 
     ## Trimmed mean difference:  0.21503 
     ## 95 percent confidence interval:
-    ## -0.2751     0.7052 
+    ## -0.2848     0.7148 
     ## 
     ## 
     ## $ATBR11D
@@ -445,7 +445,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.92815 
     ## 95 percent confidence interval:
-    ## 0.7657     1.0906 
+    ## 0.7677     1.0886 
     ## 
     ## 
     ## $ATBR11G
@@ -456,7 +456,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.7116 
     ## 95 percent confidence interval:
-    ## 0.5626     0.8605 
+    ## 0.5441     0.8791 
     ## 
     ## 
     ## $ATBR11F
@@ -467,7 +467,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  1.27937 
     ## 95 percent confidence interval:
-    ## 1.1095     1.4492 
+    ## 1.1135     1.4452 
     ## 
     ## 
     ## $ATBR11C
@@ -478,7 +478,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.46186 
     ## 95 percent confidence interval:
-    ## 0.2963     0.6274 
+    ## 0.3009     0.6229 
     ## 
     ## 
     ## $ATBR11E
@@ -489,7 +489,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.55224 
     ## 95 percent confidence interval:
-    ## 0.2843     0.8202 
+    ## 0.2814     0.823 
     ## 
     ## 
     ## $ATBR14CA
@@ -500,40 +500,40 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  -1.0452 
     ## 95 percent confidence interval:
-    ## -1.2386     -0.8518 
+    ## -1.2341     -0.8563 
     ## 
     ## 
     ## $ATBR14CC
     ## Call:
     ## WRS2::yuenbt(formula = x ~ mydata$ATBG05AA)
     ## 
-    ## Test statistic: 2.279 (df = NA), p-value = 0.09015
+    ## Test statistic: 2.279 (df = NA), p-value = 0.10017
     ## 
     ## Trimmed mean difference:  0.45198 
     ## 95 percent confidence interval:
-    ## -0.0872     0.9912 
+    ## -0.0963     1.0002 
     ## 
     ## 
     ## $ATBR14CD
     ## Call:
     ## WRS2::yuenbt(formula = x ~ mydata$ATBG05AA)
     ## 
-    ## Test statistic: -0.8081 (df = NA), p-value = 0.40234
+    ## Test statistic: -0.8081 (df = NA), p-value = 0.40568
     ## 
     ## Trimmed mean difference:  -0.16949 
     ## 95 percent confidence interval:
-    ## -0.627     0.288 
+    ## -0.5639     0.2249 
     ## 
     ## 
     ## $ATBR14CE
     ## Call:
     ## WRS2::yuenbt(formula = x ~ mydata$ATBG05AA)
     ## 
-    ## Test statistic: 3.377 (df = NA), p-value = 0.03339
+    ## Test statistic: 3.377 (df = NA), p-value = 0.02337
     ## 
     ## Trimmed mean difference:  0.71186 
     ## 95 percent confidence interval:
-    ## 0.0305     1.3933 
+    ## 0.1061     1.3176 
     ## 
     ## 
     ## $ATBR14CF
@@ -544,7 +544,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.74576 
     ## 95 percent confidence interval:
-    ## 0.6353     0.8563 
+    ## 0.6386     0.853 
     ## 
     ## 
     ## $ATBR06
@@ -555,18 +555,18 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  -108.1619 
     ## 95 percent confidence interval:
-    ## -157.0929     -59.231 
+    ## -156.6635     -59.6604 
     ## 
     ## 
     ## $ATBR07
     ## Call:
     ## WRS2::yuenbt(formula = x ~ mydata$ATBG05AA)
     ## 
-    ## Test statistic: -1.6648 (df = NA), p-value = 0.11352
+    ## Test statistic: -1.6648 (df = NA), p-value = 0.10184
     ## 
     ## Trimmed mean difference:  -93.7991 
     ## 95 percent confidence interval:
-    ## -211.5192     23.921 
+    ## -201.2748     13.6766 
     ## 
     ## 
     ## $ATBR10D
@@ -577,7 +577,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.63392 
     ## 95 percent confidence interval:
-    ## 0.4593     0.8085 
+    ## 0.4574     0.8104 
     ## 
     ## 
     ## $ATBR10B
@@ -588,7 +588,7 @@ lapply(mydata[-19], function(x) WRS2::yuenbt(x ~ mydata$ATBG05AA))
     ## 
     ## Trimmed mean difference:  0.24161 
     ## 95 percent confidence interval:
-    ## 0.0821     0.4012
+    ## 0.0862     0.397
 
 ``` r
 psych::describeBy(mydata, mydata$ATBG05AA) # get descriptive statistics
@@ -705,7 +705,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.1058695
     ## 
     ## $AKPci
-    ## [1] -0.1296210  0.3418961
+    ## [1] -0.1317528  0.2910628
     ## 
     ## $alpha
     ## [1] 0.05
@@ -721,7 +721,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.1071094
     ## 
     ## $AKPci
-    ## [1] -0.1551754  0.3881055
+    ## [1] -0.1211998  0.3371831
     ## 
     ## $alpha
     ## [1] 0.05
@@ -737,7 +737,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] -1.304883
     ## 
     ## $AKPci
-    ## [1] -1.8372252 -0.8346508
+    ## [1] -1.7821518 -0.8346508
     ## 
     ## $alpha
     ## [1] 0.05
@@ -753,7 +753,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 1.198505
     ## 
     ## $AKPci
-    ## [1] 0.9600768 1.3897862
+    ## [1] 1.036471 1.446509
     ## 
     ## $alpha
     ## [1] 0.05
@@ -769,7 +769,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.9204186
     ## 
     ## $AKPci
-    ## [1] 0.7399022 1.1144335
+    ## [1] 0.6994547 1.1383125
     ## 
     ## $alpha
     ## [1] 0.05
@@ -785,7 +785,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 1.060734
     ## 
     ## $AKPci
-    ## [1] 0.9162017 1.2339260
+    ## [1] 0.9128532 1.2237951
     ## 
     ## $alpha
     ## [1] 0.05
@@ -801,7 +801,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.6985911
     ## 
     ## $AKPci
-    ## [1] 0.5079689 2.0027380
+    ## [1] 0.4327363 1.9492286
     ## 
     ## $alpha
     ## [1] 0.05
@@ -817,7 +817,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 1.306419
     ## 
     ## $AKPci
-    ## [1] 1.097301 2.242855
+    ## [1] 1.091615 2.242855
     ## 
     ## $alpha
     ## [1] 0.05
@@ -833,7 +833,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] -0.8438628
     ## 
     ## $AKPci
-    ## [1] -1.1472595 -0.6985947
+    ## [1] -1.2818932 -0.7092271
     ## 
     ## $alpha
     ## [1] 0.05
@@ -849,7 +849,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.4657272
     ## 
     ## $AKPci
-    ## [1] 0.01091848 0.95899548
+    ## [1] 0.1005933 0.9511510
     ## 
     ## $alpha
     ## [1] 0.05
@@ -865,7 +865,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] -0.1668702
     ## 
     ## $AKPci
-    ## [1] -0.5279327  0.2571725
+    ## [1] -0.5505822  0.2029595
     ## 
     ## $alpha
     ## [1] 0.05
@@ -881,7 +881,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.7143912
     ## 
     ## $AKPci
-    ## [1] 0.2820885 1.3628199
+    ## [1] 0.2994157 1.3079600
     ## 
     ## $alpha
     ## [1] 0.05
@@ -897,7 +897,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.6222917
     ## 
     ## $AKPci
-    ## [1] 0.5013114 0.7207238
+    ## [1] 0.4555129 0.7233798
     ## 
     ## $alpha
     ## [1] 0.05
@@ -913,7 +913,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] -0.4446018
     ## 
     ## $AKPci
-    ## [1] -0.7095537 -0.2230399
+    ## [1] -0.6631201 -0.2203277
     ## 
     ## $alpha
     ## [1] 0.05
@@ -929,7 +929,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] -0.252337
     ## 
     ## $AKPci
-    ## [1] -0.54075617  0.05543956
+    ## [1] -0.61027970  0.04215529
     ## 
     ## $alpha
     ## [1] 0.05
@@ -945,7 +945,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.5552583
     ## 
     ## $AKPci
-    ## [1] 0.3719061 0.9921191
+    ## [1] 0.4020718 1.0238314
     ## 
     ## $alpha
     ## [1] 0.05
@@ -961,7 +961,7 @@ lapply(mydata[-19], function(x) WRS2::akp.effect(x ~ mydata$ATBG05AA))
     ## [1] 0.3213116
     ## 
     ## $AKPci
-    ## [1] 0.1399348 0.5038774
+    ## [1] 0.1149352 0.5084994
     ## 
     ## $alpha
     ## [1] 0.05
